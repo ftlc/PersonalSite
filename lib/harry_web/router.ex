@@ -17,7 +17,7 @@ defmodule HarryWeb.Router do
   scope "/", HarryWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    get "/", PostController, :index
     get "/aboutme", AboutMeController, :index
     resources "/posts", PostController
   end
