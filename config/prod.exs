@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :harry, HarryWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "harry-sadoyan-personal-site.gigalixirapp.com"],
+  check_origin: ["//localhost", "//sadoyan.dev", "//harry-sadoyan-personal-site.gigalixirapp.com"],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
