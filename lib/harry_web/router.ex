@@ -1,6 +1,8 @@
 defmodule HarryWeb.Router do
   use HarryWeb, :router
 
+  import HarryWeb.UserAuth
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -8,18 +10,11 @@ defmodule HarryWeb.Router do
     plug :put_root_layout, {HarryWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :fetch_current_user
   end
 
   pipeline :api do
     plug :accepts, ["json"]
-  end
-
-  scope "/", HarryWeb do
-    pipe_through :browser
-
-    get "/", PostController, :index
-    get "/aboutme", AboutMeController, :index
-    resources "/posts", PostController
   end
 
   # Other scopes may use custom stacks.
@@ -41,5 +36,42 @@ defmodule HarryWeb.Router do
       pipe_through :browser
       live_dashboard "/dashboard", metrics: HarryWeb.Telemetry, ecto_repos: [Harry.Repo]
     end
+  end
+
+  ## Authentication routes
+
+  scope "/", HarryWeb do
+    pipe_through [:browser, :redirect_if_user_is_authenticated]
+
+    get "/users/register", UserRegistrationController, :new
+    post "/users/register", UserRegistrationController, :create
+    get "/users/log_in", UserSessionController, :new
+    post "/users/log_in", UserSessionController, :create
+    get "/users/reset_password", UserResetPasswordController, :new
+    post "/users/reset_password", UserResetPasswordController, :create
+    get "/users/reset_password/:token", UserResetPasswordController, :edit
+    put "/users/reset_password/:token", UserResetPasswordController, :update
+  end
+
+  scope "/", HarryWeb do
+    pipe_through [:browser, :require_authenticated_user]
+
+    get "/users/settings", UserSettingsController, :edit
+    put "/users/settings", UserSettingsController, :update
+    get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
+    resources "/posts", PostController, except: [:index, :show]
+  end
+
+  scope "/", HarryWeb do
+    pipe_through [:browser]
+
+    delete "/users/log_out", UserSessionController, :delete
+    get "/users/confirm", UserConfirmationController, :new
+    post "/users/confirm", UserConfirmationController, :create
+    get "/users/confirm/:token", UserConfirmationController, :confirm
+
+    get "/", PostController, :index
+    get "/aboutme", AboutMeController, :index
+    resources "/posts", PostController, only: [:index, :show]
   end
 end
