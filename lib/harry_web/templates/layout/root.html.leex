@@ -21,7 +21,7 @@
           </ul>
           <%= render "_user_menu.html", assigns %>
         </nav>
-        <a href="<%= Routes.post_url(@conn, :index) %>" class="phx-logo">
+        <a href="<%= Routes.post_path(@conn, :index) %>" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
         </a>
       </section>
