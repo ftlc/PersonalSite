@@ -1,4 +1,22 @@
-<div class="phx-hero">
-  <h2>About Me</h2>
-  <p>Some paragraphs about me</p>
+<div class="bg-white-100 mx-24 rounded">
+  <h2 class="text-center text-6xl my-8 bold">About</h2>
+  <p class="m-8">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed elementum ligula. Curabitur sed sollicitudin lorem. Donec egestas commodo purus, a hendrerit turpis scelerisque ac. Pellentesque auctor aliquam urna. Sed tincidunt lectus dolor, non rutrum libero gravida sit amet. Donec pretium laoreet laoreet. Praesent commodo orci nulla, ac ullamcorper nulla scelerisque in. Vivamus ac accumsan risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla iaculis felis dolor, quis hendrerit ligula sodales ut. Donec tortor neque, porta quis sapien vitae, cursus suscipit erat. Vivamus ullamcorper non odio a blandit. Nullam aliquam velit at velit lobortis aliquet.</p>
+
+  </p>
+  <p class="m-8">
+Etiam at accumsan mi. Sed ut ultricies velit. Donec condimentum metus ut nunc elementum, in laoreet lorem posuere. In imperdiet massa vitae nulla vehicula, vitae mattis sapien pulvinar. Aliquam vitae ex augue. Donec eu nunc vel risus vestibulum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras odio massa, pellentesque ut lobortis non, iaculis ut neque. Quisque imperdiet laoreet justo, vestibulum rutrum neque eleifend eu. Duis rutrum enim id vehicula blandit. Duis cursus consequat massa. Fusce aliquet augue mauris, vitae lobortis sem rhoncus ut. Etiam lectus odio, fringilla eget ipsum eget, consequat malesuada purus. Morbi scelerisque rutrum scelerisque.
+
+  </p>
+  <p class="m-8">
+Vestibulum vitae turpis ut elit finibus fringilla eget vitae turpis. Suspendisse placerat condimentum risus, in ullamcorper augue mollis sit amet. Donec facilisis ipsum nec faucibus condimentum. Duis eros purus, rhoncus id nisl non, semper fringilla lacus. Nullam at pellentesque massa. Vivamus ornare ex non ex sollicitudin, ut fringilla dui vehicula. Maecenas blandit vestibulum tellus, nec pharetra lacus faucibus ut. Vestibulum euismod luctus lectus non lobortis. Nulla pellentesque eu quam eu placerat. Proin elementum nulla ornare blandit posuere. Donec ut viverra massa, nec efficitur justo. Phasellus nec eros leo.
+
+  </p>
+  <p class="m-8">
+Curabitur vitae mollis enim, eu venenatis ipsum. Duis finibus dictum tempor. Aliquam scelerisque risus sit amet imperdiet bibendum. Nunc lacinia, orci at ultrices rutrum, justo nunc tristique erat, eget molestie sapien tellus vitae dolor. Nam urna nulla, pellentesque vitae lobortis sodales, bibendum quis lacus. In hac habitasse platea dictumst. Donec ut mollis lacus, et rutrum dolor. Vestibulum diam nisl, iaculis vitae elementum vitae, vestibulum a leo. Duis suscipit justo ex. Nam lobortis erat sit amet quam rutrum, sit amet fringilla tortor dignissim. Quisque posuere velit lorem, bibendum scelerisque diam tincidunt eu.
+
+  </p>
+  <p class="m-8">
+Integer fermentum urna vel molestie elementum. Aenean sed leo sollicitudin, eleifend magna nec, faucibus eros. Maecenas et dapibus orci. Ut at nisl eu est faucibus interdum vitae in libero. Proin massa nunc, mollis at pellentesque et, interdum et quam. Proin commodo vel erat et egestas. Etiam in hendrerit arcu. Donec id mi velit. Curabitur dignissim ullamcorper ante. Pellentesque vitae fermentum nunc, eu tempor purus. Vivamus dignissim neque ante, sit amet accumsan quam efficitur vel. Etiam venenatis, nunc eu elementum ultrices, metus urna ullamcorper dolor, quis condimentum felis tortor eu magna. Etiam eget risus viverra, interdum leo quis, rutrum velit. Morbi pharetra molestie nulla nec rhoncus. Sed tortor dui, faucibus nec massa vel, commodo sodales magna.
+  </p>
 </div>

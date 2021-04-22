@@ -1,0 +1,11 @@
+<section >
+  <form phx-change="suggest" phx-submit="search">
+    <input type="text" name="q" value="<%= @query %>" placeholder="Live post search" list="results" autocomplete="off"/>
+    <datalist id="results">
+      <%= for post <- @results do %>
+        <option value="<%= post.title %>"><%= post.body %></option>
+      <% end %>
+    </datalist>
+    <button type="submit" phx-disable-with="Searching...">Search</button>
+  </form>
+</section>
