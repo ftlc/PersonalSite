@@ -3,6 +3,6 @@ defmodule HarryWeb.AboutMeControllerTest do
 
   test "GET /aboutme", %{conn: conn} do
     conn = get(conn, "/aboutme")
-    assert html_response(conn, 200) =~ "Some paragraphs about me"
+    assert html_response(conn, 200) =~ "About"
   end
 end

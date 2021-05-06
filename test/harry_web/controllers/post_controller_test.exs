@@ -3,9 +3,11 @@ defmodule HarryWeb.PostControllerTest do
 
   alias Harry.Blog
 
-  @create_attrs %{body: "some body", title: "some title"}
-  @update_attrs %{body: "some updated body", title: "some updated title"}
-  @invalid_attrs %{body: nil, title: nil}
+  setup :register_and_log_in_user
+
+    @create_attrs %{body: "some body", title: "some title", description: "some description"}
+    @update_attrs %{body: "some updated body", title: "some updated title", description: "some updated description"}
+    @invalid_attrs %{body: nil, title: nil, description: nil}
 
   def fixture(:post) do
     {:ok, post} = Blog.create_post(@create_attrs)
@@ -15,11 +17,12 @@ defmodule HarryWeb.PostControllerTest do
   describe "index" do
     test "lists all posts", %{conn: conn} do
       conn = get(conn, Routes.post_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Posts"
+      assert html_response(conn, 200) =~ "Posts"
     end
   end
 
   describe "new post" do
+
     test "renders form", %{conn: conn} do
       conn = get(conn, Routes.post_path(conn, :new))
       assert html_response(conn, 200) =~ "New Post"

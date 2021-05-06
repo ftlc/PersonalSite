@@ -6,9 +6,9 @@ defmodule Harry.BlogTest do
   describe "posts" do
     alias Harry.Blog.Post
 
-    @valid_attrs %{body: "some body", title: "some title"}
-    @update_attrs %{body: "some updated body", title: "some updated title"}
-    @invalid_attrs %{body: nil, title: nil}
+    @valid_attrs %{body: "some body", title: "some title", description: "some description"}
+    @update_attrs %{body: "some updated body", title: "some updated title", description: "some updated description"}
+    @invalid_attrs %{body: nil, title: nil, description: nil}
 
     def post_fixture(attrs \\ %{}) do
       {:ok, post} =
