@@ -1,4 +1,4 @@
-<div class="bg-white-100 mx-24 rounded">
+<div class="base-bg">
   <h2 class="text-center text-6xl my-8 bold">About</h2>
   <p class="m-8">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed elementum ligula. Curabitur sed sollicitudin lorem. Donec egestas commodo purus, a hendrerit turpis scelerisque ac. Pellentesque auctor aliquam urna. Sed tincidunt lectus dolor, non rutrum libero gravida sit amet. Donec pretium laoreet laoreet. Praesent commodo orci nulla, ac ullamcorper nulla scelerisque in. Vivamus ac accumsan risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla iaculis felis dolor, quis hendrerit ligula sodales ut. Donec tortor neque, porta quis sapien vitae, cursus suscipit erat. Vivamus ullamcorper non odio a blandit. Nullam aliquam velit at velit lobortis aliquet.</p>

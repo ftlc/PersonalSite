@@ -11,21 +11,16 @@
   </head>
   <body>
     <header>
-      <section class="container">
-        <nav role="navigation" class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-800 mb-3">
-  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
-      <ul>
-        <li class="nav-text py-2" >
-<%= link "About Me", to: Routes.about_me_path(@conn, :index) %>
-      </li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li class="nav-text py-2"><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
-          </ul>
-      </ul>
-    </div>
-          <%= render "_user_menu.html", assigns %>
+      <section >
+        <nav role="navigation" class="px-2 py-3 bg-gray-800 mb-3">
+            <div class="flex flex-wrap content-center content-end items-center justify-center">
+                <p class="nav-text py-2" >
+                  <%= link "About Me", to: Routes.about_me_path(@conn, :index) %>
+                </p>
+                <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
+                  <p class="nav-text py-2"><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></p>
+                <% end %>
+            </div>
         </nav>
       </section>
     </header>
